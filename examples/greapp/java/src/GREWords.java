@@ -8,4 +8,8 @@ public interface GREWords {
 	public void showAllWords();
 	
 	public void createGroups();
+	
+	public void displayGroupWise(int groupid);
+	
+	public void displayGroups();
 }

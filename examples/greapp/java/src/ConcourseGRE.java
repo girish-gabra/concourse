@@ -1,5 +1,4 @@
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Set;
 
 import com.cinchapi.concourse.Concourse;
@@ -22,7 +21,7 @@ public class ConcourseGRE implements GREWords {
 			return;
 		}
 		
-		Iterator it = id.iterator();
+		Iterator<Long> it = id.iterator();
 		long seq = 0;
 		
 		

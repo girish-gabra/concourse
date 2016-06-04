@@ -56,7 +56,7 @@ public class ManageUser {
 			
 		}while(input=='Y'||input=='y');
 		
-		
+		s.close();
 	}
 	
 }
