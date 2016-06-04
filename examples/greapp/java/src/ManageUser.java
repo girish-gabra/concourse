@@ -1,18 +1,6 @@
 import java.util.Scanner;
 
 public class ManageUser {
-
-	public void addUser(String userID, String password)
-	{
-		//
-	}
-	
-	
-	public boolean validateUser(String userID, String password)
-	{
-		return true;
-	}
-	
 	
 	public void showOptions()
 	{
