@@ -20,20 +20,23 @@ public class ManageUser {
 		char input = 'Y';
 		do
 		{
-			System.out.println("1. Word Details");
+			System.out.println("1. Find Meaning");
 			System.out.println("2. Show All Words");
 			System.out.println("3. Add Word");
-			ConcourseGRE cg = new ConcourseGRE();
+			System.out.println("4. List Words of a Group");
+			ConcourseGRE concourseGRE = new ConcourseGRE();
+			concourseGRE.createGroups();
+			//concourseGRE.displayGroups();
 			int ch = Integer.parseInt(s.nextLine());
 			switch(ch)
 			{
 			
 				case 1:	System.out.println("Enter word");
 						String word = s.nextLine();
-						cg.showWordDetails(word);
+						concourseGRE.showWordDetails(word);
 						break;
 				
-				case 2: cg.showAllWords();
+				case 2: concourseGRE.showAllWords();
 						break;		
 				
 				case 3:	System.out.println("Enter word");
@@ -42,8 +45,17 @@ public class ManageUser {
 						String meaning = s.nextLine();
 						System.out.println("Enter usage");
 						String usage = s.nextLine();
-						cg.addWord(word1, meaning, usage);		
+						
+						concourseGRE.displayGroups();
+						System.out.println("Enter the corresponding groupid");
+						int groupid = Integer.parseInt(s.nextLine());
+						concourseGRE.addWord(word1, meaning, usage,groupid);		
 						break;
+						
+				case 4: concourseGRE.displayGroups();
+						int gid = Integer.parseInt(s.nextLine());
+						concourseGRE.displayGroupWise(gid);
+						break;	
 						
 				default: System.out.println("Invalid option");
 			
